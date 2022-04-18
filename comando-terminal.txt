@@ -1,0 +1,452 @@
+﻿~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                 
+                             Comandos terminal Linux:
+                                                                   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+No linux não temos (c:) (d:) que nem o windows. No linux está tudo dentro da pasta "DEV"
+Na pasta "usr" é onde os arquivos são instalados.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         Comando "history" : lista todos os comando que foram utilizados no terminal.
+                             para usar algum comando listado, basta, vc digitar "! e o numero da opção".
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                             
+_______________________
+comando: "lsb_release -a"
+-----------------------
+Este comando serve para decobrir qual é a distribuição linux que 
+esta sendo utilizada na maquina.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+comando: "rm "exclui arquivos"
+comando: "rmdir" exclui pastas que consideradas diretorios no linux"
+         para apagar tudo no caso a baixo sera a pasta curso com todas as outras pastas que temos dentro 
+         utilizaremos o comando "rm -rf"
+          ex: 
+           
+             usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Música    Vídeos
+ comandos-terminal   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ cd Documentos/
+usuario@usuario-desktop:~/Documentos$ ls
+curso
+usuario@usuario-desktop:~/Documentos$ ls -Ra curso/
+curso/:
+.  ..  linux
+
+curso/linux:
+ .   ..  'modulo 1'
+
+'curso/linux/modulo 1':
+.  ..
+usuario@usuario-desktop:~/Documentos$ rm -rf curso/
+usuario@usuario-desktop:~/Documentos$ ls
+usuario@usuario-desktop:~/Documentos$ ls -la
+total 8
+drwxr-xr-x  2 usuario usuario 4096 set  6 22:11 .
+drwxr-xr-x 22 usuario usuario 4096 set  6 16:46 ..
+usuario@usuario-desktop:~/Documentos$ /
+
+ apago tudo.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ comando "cp" serve para copiar arquivos
+  nese exemplo foi criado um arquivo de texto chamado aula linux, onde o mesmo se encontrava na pasta de usuario.
+  Esse arquivo de texto foi copiado para a pasta "comandos-terminal"
+    
+  usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Música    Vídeos
+ comandos-terminal   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ nano aula-linux.txt
+usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   comandos-terminal   Downloads   Modelos   Público
+ aula-linux.txt      Documentos          Imagens     Música    Vídeos
+usuario@usuario-desktop:~$ cp aula-linux.txt comandos-terminal/
+usuario@usuario-desktop:~$ ls comandos-terminal/
+aula-linux.txt  comando-terminal.txt
+usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   comandos-terminal   Downloads   Modelos   Público
+ aula-linux.txt      Documentos          Imagens     Música    Vídeos
+usuario@usuario-desktop:~$ ls comandos-terminal/
+aula-linux.txt  comando-terminal.txt
+usuario@usuario-desktop:~$ 
+
+  Agora vou apagar o arquivo (aula linux.txt) que esta dentro da pasta "Home"
+   ex:
+      
+     usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   comandos-terminal   Downloads   Modelos   Público
+ aula-linux.txt      Documentos          Imagens     Música    Vídeos
+usuario@usuario-desktop:~$ rm aula-linux.txt 
+usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Música    Vídeos
+ comandos-terminal   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ 
+
+ Agora vou mover o "arquivo aula linux.txt" que está dentro da pasta "comandos-terminal" para pasta "aula" que vou criar dentro da pasta "comandos de terminal"
+  
+  ex: 
+     
+      usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Música    Vídeos
+ comandos-terminal   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ cd comandos-terminal/
+usuario@usuario-desktop:~/comandos-terminal$ ls
+aula-linux.txt  comando-terminal.txt
+usuario@usuario-desktop:~/comandos-terminal$ mkdir aula
+usuario@usuario-desktop:~/comandos-terminal$ ls
+aula  aula-linux.txt  comando-terminal.txt
+usuario@usuario-desktop:~/comandos-terminal$ mv aula
+aula/           aula-linux.txt  
+usuario@usuario-desktop:~/comandos-terminal$ mv aula-linux.txt aula/
+usuario@usuario-desktop:~/comandos-terminal$ cd aula/
+usuario@usuario-desktop:~/comandos-terminal/aula$ ls
+aula-linux.txt
+usuario@usuario-desktop:~/comandos-terminal/aula$ 
+
+Agora eu vou apagar a pasta "comandos-terminal" com tudo que tem dentro dela.
+
+ Ex : 
+     usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Música    Vídeos
+ comandos-terminal   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ rm -rf comandos-terminal/
+usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Downloads   Modelos   Público
+ Documentos          Imagens     Música    Vídeos
+usuario@usuario-desktop:~$ 
+
+
+Atemção note que a pasta comandos-terminal não existe mais. 
+
+
+
+     
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+comando: "mv" serve para mover arquivos e tambem renomealos porem;
+              para renomealos temos que realizar o comando da seguinte maneira:
+              ex: vou renomear a pasta "teste" para o nome "comandos-terminal"
+              
+                  O camndo deve se excrito da seguinte maneira:
+                  comando: "mv teste comando-terminal"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       Comando para ver o caminho para chegar na pasta 
+       
+       comando "pwd"
+       
+       EX:
+          usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Música    Vídeos
+ comandos-terminal   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ cd/
+bash: cd/: No such file or directory
+usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Música    Vídeos
+ comandos-terminal   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ cd /
+usuario@usuario-desktop:/$ ls
+bin    dev   lib    libx32      mnt   root  snap      sys  var
+boot   etc   lib32  lost+found  opt   run   srv       tmp
+cdrom  home  lib64  media       proc  sbin  swapfile  usr
+usuario@usuario-desktop:/$ pwd
+/
+usuario@usuario-desktop:/$ cd home
+usuario@usuario-desktop:/home$ pwd
+/home
+usuario@usuario-desktop:/home$ ls
+usuario
+usuario@usuario-desktop:/home$ cd usuario
+usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Música    Vídeos
+ comandos-terminal   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ cd comandos-terminal/
+usuario@usuario-desktop:~/comandos-terminal$ pwd
+/home/usuario/comandos-terminal
+usuario@usuario-desktop:~/comandos-terminal$/
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Comando "mkdir" : serve para criar pastas 
+    
+  Podemos criar varias pastas de uma vez. criando a  arvore de diretorio. "precisamos somente dar espaço entre elas depois do comando. 
+  
+  EX: 
+     mkdir pasta1 pasta2 pasta3 pasta4
+usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Música    Vídeos
+ comandos-terminal   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ cd Documentos
+usuario@usuario-desktop:~/Documentos$ ls
+usuario@usuario-desktop:~/Documentos$ mkdir pasta1 pasta2 pasta3
+usuario@usuario-desktop:~/Documentos$ ls
+pasta1  pasta2  pasta3
+usuario@usuario-desktop:~/Documentos$ 
+
+  comando "mkdir" podemos criar uma pasta dentro da outra usando o parametro -p que fica: "mkadir -p" então:
+     EX:
+        usuario@usuario-desktop:~/Documentos$ mkdir -p curso/linux/modulo\ 1/
+usuario@usuario-desktop:~/Documentos$ ls
+curso
+usuario@usuario-desktop:~/Documentos$ curso
+curso: command not found
+usuario@usuario-desktop:~/Documentos$ cd curso
+usuario@usuario-desktop:~/Documentos/curso$ ls
+linux
+usuario@usuario-desktop:~/Documentos/curso$ cd linux
+usuario@usuario-desktop:~/Documentos/curso/linux$ ls
+'modulo 1'
+usuario@usuario-desktop:~/Documentos/curso/linux$ cd .
+usuario@usuario-desktop:~/Documentos/curso/linux$ cd modulo\ 1/
+usuario@usuario-desktop:~/Documentos/curso/linux/modulo 1$ ls -l
+total 0
+usuario@usuario-desktop:~/Documentos/curso/linux/modulo 1$ ^C
+usuario@usuario-desktop:~/Documentos/curso/linux/modulo 1$ 
+
+Obs: {as contra barraserve para que bash não crie mas uma pasta com o nome 1. e assim o bash ira interpretar a barra como espaço : 
+                  usuario@usuario-desktop:~/Documentos$ mkdir -p curso/linux/modulo\ 1/
+  outra maneira sem precizar colocar a contra barra seria escrever o comando Dentro das aspas " " .
+  
+                   usuario@usuario-desktop:~/Documentos$ "mkdir -p curso/linux/modulo 1/"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   O comando "ls" seguido do parametro "-R" sendo a letra R maiuscula, mostra os diretorios que existem dentro do diretorio atual utilizando o parametro "-Rla" ele vai te dar mais      informações.
+              Ex: 
+                 usuario@usuario-desktop:~/Documentos$ ls -R curso/
+curso/:
+linux
+
+curso/linux:
+'modulo 1'
+
+'curso/linux/modulo 1':
+usuario@usuario-desktop:~/Documentos$ ls -Rla curso/
+curso/:
+total 12
+drwxrwxr-x 3 usuario usuario 4096 set  6 21:17 .
+drwxr-xr-x 3 usuario usuario 4096 set  6 21:17 ..
+drwxrwxr-x 3 usuario usuario 4096 set  6 21:17 linux
+
+curso/linux:
+total 12
+drwxrwxr-x 3 usuario usuario 4096 set  6 21:17  .
+drwxrwxr-x 3 usuario usuario 4096 set  6 21:17  ..
+drwxrwxr-x 2 usuario usuario 4096 set  6 21:17 'modulo 1'
+
+'curso/linux/modulo 1':
+total 8
+drwxrwxr-x 2 usuario usuario 4096 set  6 21:17 .
+drwxrwxr-x 3 usuario usuario 4096 set  6 21:17 ..
+usuario@usuario-desktop:~/Documentos$ /
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                  
+              
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+comando: mkdir "serve para criar pastas e diretorio"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+comando: ls "serve para listar os arquivos do locol
+
+dentro do comando "ls" temos muitos como ls -l, ls -la, ls -lah
+                       "ls --all" : mostra os arquivos ocultos.
+                       "lscpu" : mostra configurações da maquina.
+                       "ls --help" ele te mostra um manual dos comandos.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+comando: "cd" server para mudar de diretorio
+
+dentro do comando "cd"temos o "cd .." que volta no diretorio
+                              "cd . " que mantem o diretorio atual.
+                              "cd /" entra no diretorio raiz
+                                  o raiz acessa todas paginas do sistema
+                                  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+comando: "touch" serve para criar arquivos de diferentes formatos.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                     comando utilizado para instalar o virtual box:
+                                     
+digitaremos: "cd Dowloads/" para entrar na pasta onde está o arquivo do virtual box.
+em seguida utilizaremos o comando: ls para listar o conteudo da pasta.
+vamos ver que o arquivo "virtualbo x-6.1_6.1.26-145957_Ubuntu_eoan_amd64.deb" vai estar lá.
+
+depois iremos instalar.
+e utilizaremos o comando: ( "sudo dpkg -i")
+
+
+sudo dpkg -i então escrevemos "vir" e apertamos tab para completar.
+"virtualbo x-6.1_6.1.26-145957_Ubuntu_eoan_amd64.deb" 
+
+vamos ter um erro de dependências pois nao temos alguns pacotes para instalar o virtual box. para resolver iremos utilizar o seguinte comando.
+comando: "sudo apt install -f"
+
+https://www.youtube.com/watch?v=vEvISnkmImE&t=383s&ab_channel=Diolinux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                                             Instalação VisuAlg no Linux
+
+Opção:1
+https://www.youtube.com/watch?v=MElCgbUOpY8&ab_channel=Jos%C3%A9Programador
+Opção:2
+https://www.youtube.com/watch?v=-BrxiA6kOqs&ab_channel=TIsofia
+
+ Abrir o "visualg" pelo terminal : cd Dowloads 
+ 
+ 
+usuario@usuario-desktop:~$ ls
+'Área de Trabalho'   Documentos   Imagens   Música    Vídeos
+ comandos-terminal   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ dowloads
+dowloads: command not found
+usuario@usuario-desktop:~$ cd Downloads/visualg3.0.7/
+usuario@usuario-desktop:~/Downloads/visualg3.0.7$ ls
+ dicas.ini     listas.txt                                 VISUALG30.chm
+ Exemplos     'Menu do Visualg autalizado.pdf'            visualg30.exe
+ help          README.txt                                 VISUALG30.INI
+ help.chm     'RELAÇÃO DOS COMANDOS DO VISUALG 3.0.txt'   VISUALG.INI
+ LEIA-ME.txt   skins
+ LEIAME.txt    TESTE.alg
+usuario@usuario-desktop:~/Downloads/visualg3.0.7$ wine visualg30.exe
+usuario@usuario-desktop:~/Downloads/visualg3.0.7$ 
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    para instalar aplicativo "screenfetch" onde o mesmo le as informções do computador:
+    
+    comando: "sudo apt install screenfetch"
+    depois de instalado digite no terminal : screenfetch
+    
+    video aula:https://www.youtube.com/watch?v=bsy0TZyqUZE&ab_channel=MADRUGUEDS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    Curso de linux primeiros passos aula 10,11,12 como:
+    
+    Un dos interpretadores de comando utilisados no psiu do terminal é o "Bash"
+    comando para ver a versão é: "bash --version"
+    
+    1 Todo comando no linux é feito letras minusculas.
+    2 O parametro modifica a saida do comando.
+      os parametros sao semppre dados por um "- " e uma "letra" 
+      ou  "--" e uma "palavra".
+      Ex "ls -l"
+      
+    3 A tecla "tab"seve para terminar o comando.
+    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                         "NANO" editor de texto do bash
+                          CTR + G : entra guia de ajuda do nano
+                          CTR + O : salva
+                          CTR + x : sai.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+video aula sobre comados basicos no linux:
+   https://www.youtube.com/watch?v=JEhVB4VHsTI&t=3s&ab_channel=Diolinux  
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+                           Comandos utilizados para criar um pen-drive bootavel pelo terminal /bash
+                           
+                           video aula: https://www.youtube.com/watch?v=svKwBiIhuKY&ab_channel=MateusMuller
+  
+
+   usuario@usuario-desktop:~$ ls
+'Área de Trabalho'      Documentos   Imagens   Música    Vídeos
+ comando-terminal.txt   Downloads    Modelos   Público
+usuario@usuario-desktop:~$ cd Downloads/
+usuario@usuario-desktop:~/Downloads$ ls
+ debian-11.0.0-amd64-netinst.iso   visualg3.0.7  'VISUALG 3.0.7.rar'
+usuario@usuario-desktop:~/Downloads$ sudo dd if=debian-11.0.0-amd64-netinst.iso of=/dev/s
+sda       sda2      sdb       sg0       shm/      snd/      stdin     
+sda1      sda3      sdb1      sg1       snapshot  stderr    stdout    
+usuario@usuario-desktop:~/Downloads$ sudo dd if=debian-11.0.0-amd64-netinst.iso of=/dev/sdb bs=8192M; sync
+dd: memory exhausted by input buffer of size 8589934592 bytes (8,0 GiB)
+usuario@usuario-desktop:~/Downloads$ sudo fdisk -l
+Disk /dev/sda: 465,76 GiB, 500107862016 bytes, 976773168 sectors
+Disk model: ST3500312CS     
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: 76614D42-F05C-4C94-BB1F-5C1B97736355
+
+Device       Start       End   Sectors   Size Type
+/dev/sda1     2048      4095      2048     1M BIOS boot
+/dev/sda2     4096   1054719   1050624   513M EFI System
+/dev/sda3  1054720 976771071 975716352 465,3G Linux filesystem
+
+
+Disk /dev/sdb: 15 GiB, 16107175936 bytes, 31459328 sectors
+Disk model: USB Flash Disk  
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x04dd5721
+
+Device     Boot Start      End  Sectors Size Id Type
+/dev/sdb1  *       63 31459327 31459265  15G  c W95 FAT32 (LBA)
+usuario@usuario-desktop:~/Downloads$ 
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     Comandos utulix=zados para instala (Portugol Studio)
+
+1- sudo -s ( Ativa o superusuario)
+2- apt-get install unzip (instal o unzip)
+3-unzip + nome_arquivo ( faz a descompactação)
+4-chmod 755 + nome arquivo ( Desbloqueia o arquivo para insalação)
+5- ./nome_aruivo ( instala o arquivo)  
+    
+    
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Comando para instalação do google Chrome.
+
+
+Vá até o terminal e digite os seguintes comandos: 
+
+1° comando: 
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+
+2° comando (copie e cole de uma só vez todo este comando na linha no terminal): 
+
+$ sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' 
+
+3° comando (copie e cole toda esta linha no terminal): 
+
+$ sudo apt-get update ; sudo apt-get install google-chrome-stable -y 
+
+Pronto. O Chrome já está instalado no sistema. 
+
+Vá até o Dash, pesquise por chrome, arraste o ícone até lançador e pronto. 
+
+
+Abraço a todos.    
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Para criar a senha de super usuario no terminal.
+
+logado como administrador e não como root
+
+comandos:
+   
+         vou digitar no terminal: " su passwd" + enter
+         
+         agora ele vai pediar a senha normal + enter
+         
+         Agora vai pedir para digitar a nova senha de super usuario.
+         vai pedir para repetir a senha nova.
+         
+Agora a senha sera atualizada e toda ves que vc for logar como root ele vai pedir a senha nova.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
